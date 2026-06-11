@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Resources/favicon4.gif" type="image/x-icon">
+    <title>About Me | Saiko</title>
+
+    <style>
+/*      @font-face {
+        font-family: "pixel";
+        src: url(https://dl.dropbox.com/s/kmhe7d3n18vdz5e/w95fa.woff?dl=0);
+      }
+      @font-face {
+        font-family: "SakeMoru";
+        src: url(https://dl.dropbox.com/s/ktlx5w7t8gk42nb/SakeMoru-Regular.ttf);
+      }
+      @font-face {
+        font-family: "kawaii stitch";
+        src: url(https://dl.dropbox.com/s/yjal3we9j6biyn5/Kawaii%20Stitch.ttf);
+      }*/
+     @font-face {
+        font-family: "Simple";
+        src: url(/Ldfcomicsanslight-6dZo.ttf);
+      }
+
+      * {
+        box-sizing: border-box;
+        cursor: url(https://cur.cursors-4u.net/cursors/cur-3/cur220.ani),
+          url(https://cur.cursors-4u.net/cursors/cur-3/cur220.png), auto;
+      }
+
+      body {
+        margin: 0;
+        background-image: url("https://hirolovesgif.carrd.co/assets/images/image09.jpg?v=3cb58473");
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: "Simple";
+        color: #111;
+        font-weight: normal;
+        font-size: 100px;
+      }
+
+      .container {
+        width: 920px;
+        margin: 40px auto;
+        background: ghostwhite;
+        border: 1px solid #ddd;
+      }
+
+      header {
+        height: 180px;
+        background-image: url("/Resources/cute.jpeg");
+        background-size: cover;
+        background-position: center;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+      }
+
+      header h1 {
+        font-family: "kawaii stitch";
+        font-size: 32px;
+        color: ghostwhite;
+        -webkit-text-stroke: 1px #000;
+        position: absolute;
+        bottom: 16px;
+        left: 20px;
+        margin: 0;
+      }
+
+      nav {
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+        padding: 8px 0;
+        text-align: center;
+      }
+
+      nav a {
+        color: #444;
+        text-decoration: none;
+        margin: 0 12px;
+        font-size: 14px;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* BOX-STYLE ABOUT LAYOUT */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        padding: 16px;
+      }
+
+      .box {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        padding: 14px;
+        font-size: 14px;
+      }
+
+      .box h2 {
+        font-family: "SakeMoru";
+        font-size: 17px;
+        margin: 0 0 8px 0;
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: 4px;
+      }
+
+      .profile-box {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 12px;
+      }
+
+      .profile-box img {
+        width: 100%;
+        border: 1px solid #ddd;
+      }
+
+      .profile-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .profile-list li {
+        margin-bottom: 6px;
+      }
+
+      .label {
+        color: #777;
+      }
+
+      .gif-box img {
+        margin: 4px;
+        border: 1px solid #ddd;
+        image-rendering: pixelated;
+      }
+
+      .full {
+        grid-column: 1 / -1;
+      }
+
+      footer {
+        background: #fff;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        color: #666;
+      }
+      /* Make Internet Free Again */
+
+      .corner-sitting-girl {
+        position: fixed;        /* Anchors her to the screen viewport */
+        bottom: 0;              /* Keeps her sitting perfectly on the bottom edge */
+        right: 15px;            /* Slight gap from the right edge */
+        max-width: 320px;       /* Increased size to make her noticeably bigger */
+        height: auto;           /* Maintains her correct proportions */
+        z-index: 9999;          /* Keeps her on top of all website content */
+        pointer-events: none;   /* Allows users to click links right through her */
+      }
+
+      /* Mobile Resize handling 4 the Sticker */
+      @media (max-width: 480px) {
+        .corner-sitting-girl {
+          max-width: 180px;     /* Makes her slightly smaller on mobile screens */
+          right: 5px;           /* Moves her closer to the edge on small screens */
+        }
+      }
+
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+          width: 10px;
+          /* Vertical Width */
+          height: 10px;
+          /* Horizontal Height */
+      }
+
+      /* Scrollbar Track Color */
+      ::-webkit-scrollbar-track {
+          background: transparent;
+          border-radius: 0px;
+      }
+
+      /* Scrollbar Thumb Color */
+      ::-webkit-scrollbar-thumb {
+          background: transparent;
+          border-radius: 0px;
+          border: 2px solid #000000;
+      }
+
+      /* Thumb Hover */
+      ::-webkit-scrollbar-thumb:hover {
+          background: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1></h1>
+      </header>
+
+      <nav>
+        <a href="index.html">home</a>
+        <a href="about.html">about me</a>
+        <a href="friends.html">friends</a>
+        <a href="gallery.html">gallery</a>
+      </nav>
+
+      <div class="about-grid">
+        <div class="box">
+          <h2>profile</h2>
+          <div class="profile-box">
+            <img src="/About/a (1).gif" alt="avatar" />
+            <ul class="profile-list">
+              <li><span class="label">name:</span> Hiroです (Wizmax)</li>
+              <li>
+                <span class="label">likes:</span> anime, quiet nights, old web
+              </li>
+              <li><span class="label">currently:</span> building wizsite</li>
+              <li><span class="label">timezone:</span> gmt +5</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2>about</h2>
+          <p>
+          Hey! I've already put about me on the main page so it'd be useless if I put same
+          stuff here too So Im just gonna say ニャ！<img  style="height: 1.2em;" src="Resources/favicon4.gif" alt="">
+          </p>
+        </div>
+        <img src="/Resources/make.png" alt="Sitting Anime Girl" class="corner-sitting-girl">
+
+        <div class="box full">
+          <h2>anime corner</h2>
+          <div class="gif-box">
+            <img src="About/ap.gif" alt="anime" />
+            <img src="About/a (4).gif" alt="gif" />
+            <img src="About/fall.gif" alt="gif" />
+            <img src="About/black.gif" alt="gif" />
+            <img src="About/erased.gif" alt="gif" />
+            <img src="About/train.gif" alt="gif" />
+            <img src="About/ani4-ezgif.com-resize.gif" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <footer>© Saiko | about</footer>
+    </div>
+  </body>
+</html>
