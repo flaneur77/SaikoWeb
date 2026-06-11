@@ -10,9 +10,14 @@ SaikoWeb is a retro style aesthetic website based on neocities
 ### Socials 
 
 AnimeBlog: https://www.saikonews.blog/
+
 Email: max4real69@gmail.com
+
 Instagram: 7flaneurr
+
 Pinterest: https://www.pinterest.com/wizmax11/
+
 GitHub: flaneur77
+
 Sakurajima: https://sakurajima.moe/@wizmax
 
