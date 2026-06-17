@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saiko!!</title>
+    <link rel="shortcut icon" href="/Resources/favicon4.gif" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+  
+
+    <style>
+      /* @font-face {
+        font-family: "kawaii stitch";
+        src: url(https://dl.dropbox.com/s/yjal3we9j6biyn5/Kawaii%20Stitch.ttf);
+      }
+      @font-face {
+        font-family: "pixel";
+        src: url(https://dl.dropbox.com/s/kmhe7d3n18vdz5e/w95fa.woff?dl=0);
+      }
+      @font-face {
+        font-family: "SakeMoru";
+        src: url(https://dl.dropbox.com/s/ktlx5w7t8gk42nb/SakeMoru-Regular.ttf);
+      } */
+       @font-face {
+        font-family: "Simple";
+        src: url(/Ldfcomicsanslight-6dZo.ttf);
+      }
+
+      * {
+        box-sizing: border-box;
+        cursor: url(https://cur.cursors-4u.net/cursors/cur-3/cur220.ani),
+          url(https://cur.cursors-4u.net/cursors/cur-3/cur220.png), auto;
+      }
+
+      body {
+        margin: 0;
+        background-image: url("https://hirolovesgif.carrd.co/assets/images/image09.jpg?v=3cb58473");
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: Simple;
+        color: #111;
+      }  
+
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+          width: 10px;
+          /* Vertical Width */
+          height: 10px;
+          /* Horizontal Height */
+      }
+
+      /* Scrollbar Track Color */
+      ::-webkit-scrollbar-track {
+          background: transparent;
+          border-radius: 0px;
+      }
+
+      /* Scrollbar Thumb Color */
+      ::-webkit-scrollbar-thumb {
+          background: transparent;
+          border-radius: 0px;
+          border: 2px solid #000000;
+      }
+
+      /* Thumb Hover */
+      ::-webkit-scrollbar-thumb:hover {
+          background: transparent;
+      }
+
+      /* Make Internet Free Again */
+
+/* Mascot wrapper */
+.corner-sitting-girl-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9999;
+  text-align: center;
+}
+
+/* Tooltip bubble */
+.mascot-tooltip {
+  display: none;
+  margin-bottom: 6px;
+  background: #fff;
+  border: 1px dashed #aaa;
+  padding: 5px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.mascot-tooltip a {
+  color: #c060a1;
+  text-decoration: none;
+}
+
+.mascot-tooltip a:hover {
+  text-decoration: underline;
+}
+
+/* Show tooltip on hover */
+.corner-sitting-girl-wrapper:hover .mascot-tooltip {
+  display: block;
+}
+
+.corner-sitting-girl {
+  max-width: 320px;
+  height: auto;
+  pointer-events: auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .corner-sitting-girl-wrapper {
+    right: 5px;
+  }
+  .corner-sitting-girl {
+    max-width: 180px;
+  }
+}
+
+      /* MAIN WRAPPER */
+      .container {
+        width: 920px;
+        margin: 40px auto;
+        border: 1px solid #ddd;
+        background: ghostwhite;
+      }
+
+      /* HEADER / BANNER */
+      header {
+        height: 240px;
+        background-image: url("/Resources/cute.jpeg");
+        background-size: cover;
+        background-position: center;
+        border-bottom: 1px solid #ddd;
+        padding: 20px;
+        position: relative;
+      }
+
+      header h1 {
+        font-family: "simple";
+        font-size: 34px;
+        color: ghostwhite;
+        -webkit-text-stroke: 1px #000;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        margin: 0;
+      }
+
+      /* NAV BAR */
+      nav {
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+        padding: 8px 0;
+        text-align: center;
+      }
+
+      nav a {
+        color: #444;
+        text-decoration: none;
+        margin: 0 12px;
+        font-size: 14px;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* CONTENT LAYOUT */
+      .content {
+        display: grid;
+        grid-template-columns: 210px 1fr 210px;
+        gap: 12px;
+        padding: 12px;
+      }
+
+      /* SIDEBARS */
+      .sidebar {
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        padding: 10px;
+        font-size: 13px;
+      }
+
+      .sidebar h3 {
+        font-family: "SakeMoru";
+        font-size: 16px;
+        margin: 0 0 8px 0;
+        border-bottom: 1px dotted #ccc;
+      }
+
+      /* BADGES */
+      .badges img {
+        display: block;
+        margin: 6px auto;
+        image-rendering: pixelated;
+      }
+
+      /* MAIN BODY */
+      main {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        padding: 14px;
+        font-size: 14px;
+      }
+
+      main h2 {
+        font-family: "SakeMoru";
+        font-size: 18px;
+        margin-top: 0;
+      }
+
+      .anime-media img {
+        max-width: 100%;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #fff;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        color: #666;
+      }
+
+      .photopile {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+      }
+      .photopile figure {
+        display: inline-block;
+        background: white;
+        box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.55);
+        transform: rotate(2deg);
+        margin: 0 -25px;
+      }
+      .photopile figure img {
+        max-width: calc(100% - 2rem);
+        margin: 1rem 1rem 0 1rem;
+        border: 2px rgb(0, 0, 0, 0.55) inset;
+      }
+      .photopile figcaption,
+      .popovers figcaption {
+        font-family: "pixel";
+        text-align: center;
+        margin: 0.5rem 1rem 1rem 1rem;
+        font-size: 1rem;
+        color: black;
+      }
+      .photopile button {
+        background: none;
+        border: none;
+        max-width: 40%;
+      }
+      .photopile button:hover,
+      .photopile button:focus {
+        z-index: 3;
+        cursor: pointer;
+      }
+      .photopile button:nth-child(2n) {
+        transform: rotate(-10deg);
+      }
+      .photopile button:nth-child(3n) {
+        transform: rotate(5deg);
+      }
+      .photopile button:nth-child(4n) {
+        transform: rotate(4deg);
+      }
+      .photopile button:nth-child(5n) {
+        transform: rotate(-2deg);
+      }
+      .photopile button:nth-child(6n) {
+        transform: rotate(-7deg);
+      }
+      :popover-open {
+        border: none;
+        box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.55);
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+      }
+      .popovers figure:popover-open {
+        display: block;
+        background: white;
+        width: 88vmin;
+      }
+      .popovers figure:popover-open figcaption {
+        margin: 2.5vmin 1rem 4vmin 1rem;
+        font-size: 175%;
+        color: black;
+      }
+      .popovers figure:popover-open img {
+        margin: 4vmin 4vmin 0 4vmin;
+        width: 80vmin;
+        border: 4px rgb(0, 0, 0, 0.55) inset;
+      }
+      .text-links {
+  list-style: none;
+  padding: 0;
+}
+
+.text-links li {
+  margin: 5px 0;
+}
+
+.text-links a {
+  text-decoration: none;
+}
+
+
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: black;
+  color: #00ffff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border: 1px solid #00ffff;
+  font-family: monospace;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header></header>
+
+      <nav>
+        <a href="index.html">home</a>
+        <a href="about.html">about me</a>
+        <a href="friends.html">friends</a>
+        <a href="gallery.html">gallery</a>
+      </nav>
+
+      <div class="content">
+        <aside class="sidebar">
+          <h3>badges</h3>
+          <div class="badges">
+<a href="#" id="wizButton">
+  <img src="/wizmax.gif" alt="wizmax-button" />
+</a>
+
+<div id="toast">Copied ✨</div>
+<a href="https://abnormalsweater.neocities.org"><img src="https://abnormalsweater.neocities.org/Button.gif" width=88 height=30></a>
+<a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a>
+            <img src="/Badges/riversea1.gif" alt="badge" />
+            <img src="/Badges/absolute.gif" alt="badge" />
+            <img src="/Badges/antinft.gif" alt="badge" />
+            <img src="/Badges/noweb32.gif" alt="badge" />
+            <img src="/Badges/nowebp.gif" alt="badge" />
+            <img src="/Badges/crushit.gif" alt="badge" />
+            <img src="/Badges/roly-saynotoweb3.gif" alt="badge" />
+            <img src="/archlinux.gif" alt="badge" />
+            <img src="/Badges/ani.gif" alt="badge" />
+            <img src="/Badges/goo.gif" alt="badge" />
+            <img src="/Badges/ca.gif" alt="badge" />
+          </div>
+        </aside>
+
+        <main>
+          <h2>home</h2>
+          <p>
+            Hey! I’m Wiz. I like anime, manhwa (recently started reading), tech, history, 
+            and all the weird stuff out there. I’m also really into studying my own religion (Islam) —
+            love it I usually spend my whole time on the internet...literally you can find me anywhere.
+            
+<div class="corner-sitting-girl-wrapper">
+  <div class="mascot-tooltip">
+    Check out my blog ✿ <a href="https://saikonews.blog">SaikoBlog</a>
+  </div>
+  <img src="/Resources/make.png" alt="Sitting Anime Girl" class="corner-sitting-girl">
+</div>
+          <div class="anime-media">
+        
+          </div>
+          <div><h2>haru</h2>
+            <iframe width="314" height="321" scrolling="no" src="https://gify.pet/pet/pet.html?name=Haru&dob=1780763455&gender=f&element=Water&pet=anime.gif&map=town.gif&background=&tablecolor=black&textcolor=black" frameborder="0"></iframe>
+
+          </div>
+          <div><h2>Islamic Quotes</h2></div>
+          <div class="photopile">
+            <button popovertarget="photo1">
+              <figure>
+                <img src="/Badges/a.jpg" alt="" />
+                <figcaption>Trust Allah's Plans</figcaption>
+              </figure>
+            </button>
+            <button popovertarget="photo2">
+              <figure>
+                <img src="/Bg/download (10).jpg" alt="" />
+                <figcaption>Be Grateful</figcaption>
+              </figure>
+            </button>
+            <button popovertarget="photo3">
+              <figure>
+                <img
+                  src="/Bg/Love For Allah’s Sake — A Love That Never Breaks.png"
+                  alt=""
+                />
+                <figcaption>Love for Allah's sake</figcaption>
+              </figure>
+            </button>
+          </div>
+          <div class="popovers">
+            <figure popover id="photo1">
+              <img src="/Badges/a.jpg" alt="" />
+              <figcaption>True</figcaption>
+            </figure>
+            <figure popover id="photo2">
+              <img src="/Bg/download (10).jpg" alt="" />
+              <figcaption>True</figcaption>
+            </figure>
+            <figure popover id="photo3">
+              <img
+                src="/Bg/Love For Allah’s Sake — A Love That Never Breaks.png"
+                alt=""
+              />
+              <figcaption>True</figcaption>
+            </figure>
+          </div>
+        </main>
+
+        <aside class="sidebar">
+  <h3>links</h3>
+
+  <ul class="text-links">
+    <li><a href="https://saikonews.blog">AnimeBlog</a></li>
+    <li><a href="https://instagram.com/wizmax_11">Instagram</a></li>
+    <li><a href="https://youtube.com/@wizmax11">YouTube</a></li>
+    <li><a href="https://www.pinterest.com/wizmax11/">Pinterest</a></li>
+    <li><a href="https://github.com/flaneur77">Github</a></li>
+    <li><a href="https://discord.gg/PVx9e98Yqp">Discord</a></li>
+    <li><a href="https://sakurajima.moe/@wizmax">Sakurajima</a></li>
+
+  </ul>
+  
+</aside>
+
+      <footer>© Saiko | Love yea ❤️</footer>
+    </div>
+
+    <script>
+const button = document.getElementById("wizButton");
+const toast = document.getElementById("toast");
+
+button.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  const code = `<a href="https://saiko.lol">
+  <img src="https://saiko.lol/wizmax.gif" alt="wizmax-button" />
+</a>`;
+
+  try {
+    await navigator.clipboard.writeText(code);
+    showToast();
+  } catch (err) {
+    showToast("Copy failed 😕");
+  }
+});
+
+function showToast(msg) {
+  toast.textContent = msg || "Copied ❤️ If you put my button on your site — I’ll add yours too 🤝";
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2500);
+}
+</script>
+  </body>
+</html>
